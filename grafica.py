@@ -11,12 +11,11 @@ app = Flask(__name__)
 def home():
     return '''
         <h1>Gráfico simple con Flask y Seaborn</h1>
-        <imgt.png
+        /plot.png
     '''
 
 @app.route('/plot.png')
 def plot_png():
-    # Usamos seaborn para un gráfico bonito
     sns.set(style="darkgrid")
     plt.figure(figsize=(4,3))
     datos_x = [1, 2, 3, 4]
